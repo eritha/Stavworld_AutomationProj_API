@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vendor Detail API Tests - Complete Suite</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; }
+.header { background-color: #f0f0f0; padding: 20px; border-radius: 5px; }
+.test { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+.passed { background-color: #d4edda; border-color: #c3e6cb; }
+.failed { background-color: #f8d7da; border-color: #f5c6cb; }
+.step { margin: 10px 0; padding: 10px; background-color: #f8f9fa; border-left: 4px solid #007bff; }
+.request { background-color: #e9ecef; padding: 10px; margin: 10px 0; border-radius: 3px; }
+.response { background-color: #e9ecef; padding: 10px; margin: 10px 0; border-radius: 3px; }
+pre { background-color: #f8f9fa; padding: 10px; border-radius: 3px; overflow-x: auto; }
+.collapsible { background-color: #f1f1f1; color: #444; cursor: pointer; padding: 8px; width: 100%; border: none; text-align: left; outline: none; font-size: 14px; border-radius: 3px; margin: 5px 0; }
+.test-header { background-color: #e3f2fd; border: 2px solid #2196f3; font-weight: bold; padding: 10px; border-radius: 5px; }
+.test-content { padding: 15px; background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; margin-top: 10px; }
+.test-details { margin-top: 10px; }
+.test-status { font-size: 16px; font-weight: bold; margin-left: 10px; }
+.test-suite { margin: 30px 0; padding: 20px; border: 2px solid #007bff; border-radius: 8px; background-color: #f8f9fa; }
+.suite-tests { margin-top: 15px; }
+.test-suite h1 { color: #007bff; margin-bottom: 10px; }
+.collapsible:hover { background-color: #ddd; }
+.collapsible:after { content: '▼'; color: #777; font-weight: bold; float: right; margin-left: 5px; }
+.collapsible.active:after { content: '▲'; }
+.collapsible-content { padding: 0 18px; display: none; overflow: hidden; background-color: #f9f9f9; border-radius: 3px; }
+.json-summary { background-color: #e3f2fd; padding: 8px; border-radius: 3px; margin: 5px 0; font-size: 12px; color: #1976d2; }
+</style>
+<script>
+function toggleCollapsible(element) {
+  element.classList.toggle('active');
+  var content = element.nextElementSibling;
+  if (content.style.display === 'block') {
+    content.style.display = 'none';
+  } else {
+    content.style.display = 'block';
+  }
+}
+</script>
+</head>
+<body>
+<div class='header'>
+<h1>Vendor Detail API Tests - Complete Suite</h1>
+<p><strong>Environment:</strong> StavWorld Demo</p>
+<p><strong>Base URL:</strong> https://stavpaydemo2.stavtar.com</p>
+<p><strong>Test Framework:</strong> NUnit + Custom HTML Report</p>
+<p><strong>Test Date:</strong> 2025-09-14 23:59:52</p>
+</div>
+<div class='test-container'>
+<div class='test-suite' id='suite_Vendor_Detail_API_Suite'>
+<h1>📋 Vendor Detail API Suite</h1>
+<button class='collapsible' onclick='toggleCollapsible(this)'>📝 Description</button>
+<div class='collapsible-content'><p>Comprehensive tests for vendor detail data API endpoints</p></div>
+<div class='suite-tests'>
+<div class='test' id='test_1'>
+<div class='test-header'>
+<h2>Test 1: GetVendorDetail_PositiveCase_ValidVendorId_ShouldReturnSuccess <span class='test-status' id='status_1'>⏳ Running...</span></h2>
+</div>
+<div class='test-content'>
+<p><strong>Description:</strong> Happy Path - Test with valid vendor ID (vendor ID = 16)</p>
+<div class='test-details'>
+<div class='step'>
+<h4>📝 Test Setup</h4>
+<p>Calling vendor detail API with valid vendor ID (16)</p>
+</div>
+<div class='step'>
+<h3>📤 API Request</h3>
+<div class='request'>
+<p><strong>Method:</strong> GET</p>
+<p><strong>URL:</strong> https://stavpaydemo2.stavtar.com/dotnetcore/api/v1/vendordetail/16/</p>
+<p><strong>Headers:</strong> Authorization: Bearer [TOKEN]</p>
+</div>
+</div>
+<div class='step'>
+<h3>📥 API Response</h3>
+<div class='response'>
+<p><strong>Status:</strong> <span style='color: green'>✅ 200</span></p>
+<p><strong>Success:</strong> True</p>
+<p><strong>Duration:</strong> 1498.75ms</p>
+<div class='json-summary'><strong>Response Data Type:</strong> VendorDetailResponse | <strong>Size:</strong> 7943 characters</div>
+<button class='collapsible' onclick='toggleCollapsible(this)'>📄 View Full Response Data</button>
+<div class='collapsible-content'>
+<pre>{
+  "Company": {
+    "CompanyId": 1,
+    "CompanyName": "Stavtar Inc",
+    "CompanyType": "IT",
+    "CompanyWebsite": "www.stavtar.com",
+    "FiscalYearStartsWithMonth": null,
+    "IncomeTaxYearStartsWithMonth": null,
+    "EIN": null,
+    "SSN": null,
+    "BusinessNumber": 789,
+    "TaxForm": 1,
+    "CompanyNotes": null,
+    "IsActive": true,
+    "Name": "Stavtar",
+    "CreatedById": 8,
+    "CreatedOn": "2018-05-08T15:18:35Z",
+    "ModifiedById": 8,
+    "ModifiedOn": "2018-05-08T15:18:35Z"
+  },
+  "Vendor1099": {
+    "Address": {
+      "AddressState": null,
+      "AddressCountry": null,
+      "AddressModuleMapping": [],
+      "AddressId": 1427,
+      "AddressLine1": null,
+      "AddressLine2": null,
+      "AddressLine3": null,
+      "AddressLine4": null,
+      "AddressLine5": null,
+      "AddressCity": null,
+      "AddressStateId": null,
+      "AddressProvince": null,
+      "AddressZipCode": null,
+      "AddressCountryId": null,
+      "AddressVerificationStatus": "Pending Verification",
+      "AddressNote": null,
+      "IsActive": true,
+      "IsLocked": false,
+      "LastModifiedById": 0,
+      "LastModifiedOn": "2025-09-13T17:56:52Z"
+    },
+    "Vendor1099Type": {
+      "ParentLookupValue": null,
+      "LookupValueId": 1073,
+      "CompanyId": 1,
+      "LookupTypeId": 63,
+      "LookupTypeEnum": null,
+      "LookupValueName": "Individual",
+      "LookupLongName": null,
+      "LookupName": "Individual",
+      "ExternalId": null,
+      "IsActive": true,
+      "IsForwardAction": null,
+      "Sequence": null,
+      "CreatedById": 2,
+      "CreatedOn": "2023-08-07T08:32:42Z",
+      "ModifiedById": 2,
+      "ModifiedOn": "2023-08-07T08:32:42Z",
+      "ParentLookupValueId": null
+    },
+    "Vendor1099FormType": null,
+    "Vendor1099Id": 15,
+    "FirstName": null,
+    "LastName": null,
+    "AddressId": 1427,
+    "CompanyName": null,
+    "DBA": null,
+    "Track1099": false,
+    "SameAsContactAddress": null,
+    "EINSSN": null,
+    "Tax1099Notes": null,
+    "IsElectronic1099": false,
+    "Electronic1099Emails": null,
+    "Electronic1099CCEmails": null,
+    "Vendor1099TypeId": 1073,
+    "Vendor1099FormTypeId": null,
+    "ModifiedById": 223,
+    "ModifiedOn": "2025-06-10T13:48:37Z",
+    "IsActive": true,
+    "IsPrimary1099Recipient": false
+  },
+  "TaxClassification": {
+    "ParentLookupValue": null,
+    "LookupValueId": 1076,
+    "CompanyId": 1,
+    "LookupTypeId": 64,
+    "LookupTypeEnum": null,
+    "LookupValueName": "Partnership",
+    "LookupLongName": null,
+    "LookupName": "Partnership",
+    "ExternalId": null,
+    "IsActive": true,
+    "IsForwardAction": null,
+    "Sequence": 3,
+    "CreatedById": 2,
+    "CreatedOn": "2023-08-07T08:32:42Z",
+    "ModifiedById": 2,
+    "ModifiedOn": "2023-08-07T08:32:42Z",
+    "ParentLookupValueId": null
+  },
+  "VendorContact": {
+    "Address": {
+      "AddressState": null,
+      "AddressCountry": null,
+      "AddressModuleMapping": [],
+      "AddressId": 256,
+      "AddressLine1": null,
+      "AddressLine2": null,
+      "AddressLine3": null,
+      "AddressLine4": null,
+      "AddressLine5": null,
+      "AddressCity": null,
+      "AddressStateId": null,
+      "AddressProvince": null,
+      "AddressZipCode": null,
+      "AddressCountryId": null,
+      "AddressVerificationStatus": "Pending Verification",
+      "AddressNote": null,
+      "IsActive": true,
+      "IsLocked": false,
+      "LastModifiedById": 60,
+      "LastModifiedOn": "2025-06-10T13:48:37Z"
+    },
+    "VendorContactId": 16,
+    "CompanyId": null,
+    "VendorId": 16,
+    "ContactSalutation": null,
+    "ContactName": null,
+    "ContactFullName": null,
+    "ContactPhone": "",
+    "ContactMobile": "",
+    "ContactFax": null,
+    "ContactNote": null,
+    "IsActive": true,
+    "ContactWebsite": null,
+    "ContactEmail": "",
+    "CreatedById": 223,
+    "CreatedOn": "2018-05-08T12:03:15Z",
+    "ModifiedById": 223,
+    "ModifiedOn": "2025-09-14T00:54:15Z",
+    "AddressId": 256
+  },
+  "VendorBalance": {
+    "VendorBalanceId": 16,
+    "CompanyId": null,
+    "VendorId": 16,
+    "BalanceAsOfDate": 0.0,
+    "DayOpenBalance": 0.0,
+    "DayCloseBalance": 0.0,
+    "IsActive": true,
+    "CreatedById": 1,
+    "CreatedOn": "2018-05-08T10:45:11Z",
+    "ModifiedById": 1,
+    "ModifiedOn": "2025-09-14T00:54:15Z"
+  },
+  "Compliance": {
+    "DueDilligenceNotes": [],
+    "VendorComplianceDepartmentMapping": [],
+    "VendorComplianceUserMapping": [],
+    "Documents": [],
+    "ComplianceId": 14,
+    "VendorId": 16,
+    "CategorySubCategoryId": null,
+    "CompanyId": 1,
+    "RiskCategorySelection": "[]",
+    "ComplianceNotes": null,
+    "IsActive": true,
+    "CreatedById": 1,
+    "CreatedOn": "2018-05-08T11:08:49Z",
+    "ModifiedById": 223,
+    "ModifiedOn": "2025-09-14T00:54:15Z"
+  },
+  "Accounts": [],
+  "VendorContracts": [],
+  "VendorExpenseTypeMapping": [],
+  "VendorAllocationSchemeMapping": [],
+  "UDFValue": {
+    "Id": 285,
+    "UDFValuePrincipalId": 16,
+    "IsActive": true,
+    "ModifiedById": 223,
+    "ModifiedOn": "2025-09-14T00:54:15Z",
+    "UDF_123": false,
+    "UDF_32271": null,
+    "UDF_54487yesno": true,
+    "UDF_Blacklisted": null,
+    "UDF_Change": null,
+    "UDF_Changetype": null,
+    "UDF_Classv360": "10",
+    "UDF_CsaVendor": false,
+    "UDF_Danslocation": null,
+    "UDF_Devclasstest": null,
+    "UDF_Devdecimaltest": 2.5,
+    "UDF_Fundowner": null,
+    "UDF_GregsField": null,
+    "UDF_InheritanceUdf": null,
+    "UDF_InheritanceUdf1": null,
+    "UDF_MaheshTest": null,
+    "UDF_Manager": null,
+    "UDF_NeetaApproves": null,
+    "UDF_Number": null,
+    "UDF_PaidBy": "AWS",
+    "UDF_Period": null,
+    "UDF_Received1099": null,
+    "UDF_SoftDollar": "Test12",
+    "UDF_Subsidiary": null,
+    "UDF_Test": null,
+    "UDF_Test876": null,
+    "UDF_TestOneUdfInsert": null,
+    "UDF_Testdemo": null,
+    "UDF_Testdemo2": null,
+    "UDF_Testdemo24": null,
+    "UDF_Testeff": null,
+    "UDF_Testinternal": null,
+    "UDF_Testqa123": null,
+    "UDF_Testudfvalue": null,
+    "UDF_Text": null,
+    "UDF_Udf": "4",
+    "UDF_Udf1": null,
+    "UDF_UdfListText": "Rohit Vishwakarma",
+    "UDF_UdfNumber": 1,
+    "UDF_UdfPopUpTest": "aaa",
+    "UDF_Udfclass": "United States of America",
+    "UDF_Udffromvendor": null,
+    "UDF_Udfnum": null,
+    "UDF_V349": 2,
+    "UDF_V364DateUdf": null,
+    "UDF_V364NumListUdf": null,
+    "UDF_V364paymentmodewire": "Yes",
+    "UDF_Vat": null,
+    "UDF_VendorClassification": null,
+    "UDF_W9Date": "2025-03-28",
+    "UDF_W9OnFile": null,
+    "UDF_YesOrNo": null,
+    "UDF_Yesno": null
+  },
+  "UseTax": null,
+  "RefPayment": {
+    "PaymentId": 2,
+    "PaymentMode": "Wire",
+    "IsDefault": false,
+    "IsActive": true,
+    "CreatedById": 1,
+    "CreatedOn": "2018-05-08T09:59:11Z",
+    "ModifiedById": 1,
+    "ModifiedOn": "2018-05-08T09:59:11Z",
+    "IsVisible": true
+  },
+  "InvoiceCcy": null,
+  "PaymentCcy": null,
+  "Documents": [],
+  "VendorBusinessOwnerMapping": [],
+  "LegalVendor": null,
+  "PaymentTerm": null,
+  "AccessGroups": [],
+  "VendorEPayment": null,
+  "AccountApprovals": [],
+  "VendorId": 16,
+  "CompanyId": 1,
+  "VendorCode": null,
+  "VendorShortName": "The River Fund",
+  "VendorLongName": "The River Fund",
+  "VendorNotes": null,
+  "BudgetCode": "V16",
+  "VendorUpdateRevisionNumber": null,
+  "IsActive": true,
+  "VendorCategoryId": null,
+  "UseTaxId": null,
+  "UseTaxComment": null,
+  "VendorTypeId": 6,
+  "WorkflowEntityMapping": null,
+  "CreatedById": 1,
+  "CreatedOn": "2018-05-04T16:20:35Z",
+  "ModifiedById": 223,
+  "ModifiedOn": "2025-09-14T00:54:15Z",
+  "Vendor1099Id": 15,
+  "TaxClassificationId": 1076,
+  "IsForeignEntity": false,
+  "DefaultRefPaymentId": 2,
+  "InvoiceCcyId": null,
+  "VendorAllocationNotes": null,
+  "VendorWorkflowNotes": null,
+  "PaymentCcyId": null,
+  "ParentId": null,
+  "FeedRunId": null,
+  "NoteCount": 0,
+  "LegalVendorId": null,
+  "PaymentTermId": null,
+  "IsShowOCRDataLoader": false,
+  "WorkflowSchemeCode": null,
+  "VendorEPaymentId": null,
+  "PaymentNotificationEmail": null
+}</pre>
+</div>
+</div>
+</div>
+<div class='step'>
+<h4>✅ Response Status Code</h4>
+<p style='color: green'>Expected 200, got 200</p>
+</div>
+<div class='step'>
+<h4>✅ Response Success</h4>
+<p style='color: green'>Expected true, got True</p>
+</div>
+<div class='step'>
+<h4>✅ Response Data Not Null</h4>
+<p style='color: green'>Response data should not be null</p>
+</div>
+<script>document.getElementById('status_1').innerHTML = '✅ Passed';</script>
+<p><strong>Result:</strong> Test passed successfully</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='header'>
+<h2>Test Summary</h2>
+<p><strong>Total Tests:</strong> 1</p>
+<p><strong>Passed:</strong> <span style='color: green'>1</span></p>
+<p><strong>Failed:</strong> <span style='color: red'>0</span></p>
+<p><strong>Success Rate:</strong> 100.0%</p>
+</div>
+</body>
+</html>

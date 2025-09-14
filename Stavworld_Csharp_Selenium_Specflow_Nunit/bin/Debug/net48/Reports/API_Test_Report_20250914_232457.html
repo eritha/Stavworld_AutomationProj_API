@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>StavWorld API Tests - Complete Suite</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; }
+.header { background-color: #f0f0f0; padding: 20px; border-radius: 5px; }
+.test { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+.passed { background-color: #d4edda; border-color: #c3e6cb; }
+.failed { background-color: #f8d7da; border-color: #f5c6cb; }
+.step { margin: 10px 0; padding: 10px; background-color: #f8f9fa; border-left: 4px solid #007bff; }
+.request { background-color: #e9ecef; padding: 10px; margin: 10px 0; border-radius: 3px; }
+.response { background-color: #e9ecef; padding: 10px; margin: 10px 0; border-radius: 3px; }
+pre { background-color: #f8f9fa; padding: 10px; border-radius: 3px; overflow-x: auto; }
+.collapsible { background-color: #f1f1f1; color: #444; cursor: pointer; padding: 8px; width: 100%; border: none; text-align: left; outline: none; font-size: 14px; border-radius: 3px; margin: 5px 0; }
+.test-header { background-color: #e3f2fd; border: 2px solid #2196f3; font-weight: bold; padding: 10px; border-radius: 5px; }
+.test-content { padding: 15px; background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; margin-top: 10px; }
+.test-details { margin-top: 10px; }
+.test-status { font-size: 16px; font-weight: bold; margin-left: 10px; }
+.test-suite { margin: 30px 0; padding: 20px; border: 2px solid #007bff; border-radius: 8px; background-color: #f8f9fa; }
+.suite-tests { margin-top: 15px; }
+.test-suite h1 { color: #007bff; margin-bottom: 10px; }
+.collapsible:hover { background-color: #ddd; }
+.collapsible:after { content: '▼'; color: #777; font-weight: bold; float: right; margin-left: 5px; }
+.collapsible.active:after { content: '▲'; }
+.collapsible-content { padding: 0 18px; display: none; overflow: hidden; background-color: #f9f9f9; border-radius: 3px; }
+.json-summary { background-color: #e3f2fd; padding: 8px; border-radius: 3px; margin: 5px 0; font-size: 12px; color: #1976d2; }
+</style>
+<script>
+function toggleCollapsible(element) {
+  element.classList.toggle('active');
+  var content = element.nextElementSibling;
+  if (content.style.display === 'block') {
+    content.style.display = 'none';
+  } else {
+    content.style.display = 'block';
+  }
+}
+</script>
+</head>
+<body>
+<div class='header'>
+<h1>StavWorld API Tests - Complete Suite</h1>
+<p><strong>Environment:</strong> StavWorld Demo</p>
+<p><strong>Base URL:</strong> https://stavpaydemo2.stavtar.com</p>
+<p><strong>Test Framework:</strong> NUnit + Custom HTML Report</p>
+<p><strong>Test Date:</strong> 2025-09-14 23:24:57</p>
+</div>
+<div class='test-container'>
+<div class='test-suite' id='suite_Authentication'>
+<h1>📋 Authentication</h1>
+<button class='collapsible' onclick='toggleCollapsible(this)'>📝 Description</button>
+<div class='collapsible-content'><p>Azure B2C Authentication Setup</p></div>
+<div class='suite-tests'>
+<div class='test' id='test_1'>
+<div class='test-header'>
+<h2>Test 1: Authentication Setup <span class='test-status' id='status_1'>⏳ Running...</span></h2>
+</div>
+<div class='test-content'>
+<p><strong>Description:</strong> Setup Azure B2C authentication</p>
+<div class='test-details'>
+<div class='step'>
+<h4>❌ Error: Failed to obtain access token from Azure B2C</h4>
+<p><strong>Exception:</strong> Failed to obtain access token from Azure B2C</p>
+<p><strong>Stack Trace:</strong></p>
+<pre></pre>
+</div>
+<script>document.getElementById('status_1').innerHTML = '❌ Failed';</script>
+<p><strong>Result:</strong> Authentication failed</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='header'>
+<h2>Test Summary</h2>
+<p><strong>Total Tests:</strong> 1</p>
+<p><strong>Passed:</strong> <span style='color: green'>0</span></p>
+<p><strong>Failed:</strong> <span style='color: red'>2</span></p>
+<p><strong>Success Rate:</strong> 0.0%</p>
+</div>
+</body>
+</html>
+</div>
+</div>
+</div>
+<div class='header'>
+<h2>Test Summary</h2>
+<p><strong>Total Tests:</strong> 1</p>
+<p><strong>Passed:</strong> <span style='color: green'>0</span></p>
+<p><strong>Failed:</strong> <span style='color: red'>2</span></p>
+<p><strong>Success Rate:</strong> 0.0%</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+is_global = true
+build_property.RootNamespace = Stavworld_Csharp_Selenium_Specflow_Nunit
+build_property.ProjectDir = /Users/eritha/Documents/WorkSP/Stavworld_AutomationProj_API/Stavworld_Csharp_Selenium_Specflow_Nunit/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

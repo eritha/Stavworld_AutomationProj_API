@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vendor Summary API Tests - Complete Suite</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; }
+.header { background-color: #f0f0f0; padding: 20px; border-radius: 5px; }
+.test { margin: 20px 0; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+.passed { background-color: #d4edda; border-color: #c3e6cb; }
+.failed { background-color: #f8d7da; border-color: #f5c6cb; }
+.step { margin: 10px 0; padding: 10px; background-color: #f8f9fa; border-left: 4px solid #007bff; }
+.request { background-color: #e9ecef; padding: 10px; margin: 10px 0; border-radius: 3px; }
+.response { background-color: #e9ecef; padding: 10px; margin: 10px 0; border-radius: 3px; }
+pre { background-color: #f8f9fa; padding: 10px; border-radius: 3px; overflow-x: auto; }
+.collapsible { background-color: #f1f1f1; color: #444; cursor: pointer; padding: 8px; width: 100%; border: none; text-align: left; outline: none; font-size: 14px; border-radius: 3px; margin: 5px 0; }
+.test-header { background-color: #e3f2fd; border: 2px solid #2196f3; font-weight: bold; padding: 10px; border-radius: 5px; }
+.test-content { padding: 15px; background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 5px; margin-top: 10px; }
+.test-details { margin-top: 10px; }
+.test-status { font-size: 16px; font-weight: bold; margin-left: 10px; }
+.test-suite { margin: 30px 0; padding: 20px; border: 2px solid #007bff; border-radius: 8px; background-color: #f8f9fa; }
+.suite-tests { margin-top: 15px; }
+.test-suite h1 { color: #007bff; margin-bottom: 10px; }
+.collapsible:hover { background-color: #ddd; }
+.collapsible:after { content: '▼'; color: #777; font-weight: bold; float: right; margin-left: 5px; }
+.collapsible.active:after { content: '▲'; }
+.collapsible-content { padding: 0 18px; display: none; overflow: hidden; background-color: #f9f9f9; border-radius: 3px; }
+.json-summary { background-color: #e3f2fd; padding: 8px; border-radius: 3px; margin: 5px 0; font-size: 12px; color: #1976d2; }
+</style>
+<script>
+function toggleCollapsible(element) {
+  element.classList.toggle('active');
+  var content = element.nextElementSibling;
+  if (content.style.display === 'block') {
+    content.style.display = 'none';
+  } else {
+    content.style.display = 'block';
+  }
+}
+</script>
+</head>
+<body>
+<div class='header'>
+<h1>Vendor Summary API Tests - Complete Suite</h1>
+<p><strong>Environment:</strong> StavWorld Demo</p>
+<p><strong>Base URL:</strong> https://stavpaydemo2.stavtar.com</p>
+<p><strong>Test Framework:</strong> NUnit + Custom HTML Report</p>
+<p><strong>Test Date:</strong> 2025-09-15 00:21:19</p>
+</div>
+<div class='test-container'>
+<div class='test-suite' id='suite_Vendor_Summary_API_Suite'>
+<h1>📋 Vendor Summary API Suite</h1>
+<button class='collapsible' onclick='toggleCollapsible(this)'>📝 Description</button>
+<div class='collapsible-content'><p>Comprehensive tests for vendor summary data API endpoints</p></div>
+<div class='suite-tests'>
+<div class='step'>
+<h4>📝 🔐 Authentication Status</h4>
+<p>❌ FAILED - ❌ REFRESH TOKEN EXPIRED: AADB2C90090: The provided JWE is not a valid 5 segment token.
+Correlation ID: ad50eda6-9d49-4219-a9bb-e3ceafd6b84f
+Timestamp: 2025-09-14 17:21:20Z
+</p>
+</div>
+<div class='step'>
+<h4>📝 📋 Test Execution</h4>
+<p>All tests skipped due to authentication failure</p>
+</div>
+<div class='step'>
+<h4>📝 🛠️ Resolution</h4>
+<p>Please check refresh token expiry and login again to get a new token</p>
+</div>
+<div class='test' id='test_1'>
+<div class='test-header'>
+<h2>Test 1: GetVendorSummaryData_PositiveCase_ValidParameters_ShouldReturnSuccess <span class='test-status' id='status_1'>⏳ Running...</span></h2>
+</div>
+<div class='test-content'>
+<p><strong>Description:</strong> Happy Path - Test with valid parameters</p>
+<div class='test-details'>
+<div class='step'>
+<h4>📝 Test Setup</h4>
+<p>Call vendor summary API with valid parameters (ActiveFlag=true, TileFlag='all')</p>
+</div>
+<div class='step'>
+<h4>📝 Expected Result</h4>
+<p>Should return successful response with vendor summary data</p>
+</div>
+<div class='step'>
+<h4>📝 ❌ Authentication Error</h4>
+<p>❌ REFRESH TOKEN EXPIRED: AADB2C90090: The provided JWE is not a valid 5 segment token.
+Correlation ID: ad50eda6-9d49-4219-a9bb-e3ceafd6b84f
+Timestamp: 2025-09-14 17:21:20Z
+</p>
+</div>
+<script>document.getElementById('status_1').innerHTML = '❌ Failed';</script>
+<p><strong>Result:</strong> Test skipped due to authentication failure</p>
+</div>
+</div>
+</div>
+<div class='test' id='test_2'>
+<div class='test-header'>
+<h2>Test 2: GetVendorSummaryData_EdgeCase_AdditionalValidation_ShouldProcessCorrectly <span class='test-status' id='status_2'>⏳ Running...</span></h2>
+</div>
+<div class='test-content'>
+<p><strong>Description:</strong> Edge case - Test additional validation scenarios</p>
+<div class='test-details'>
+<div class='step'>
+<h4>📝 Test Setup</h4>
+<p>Call vendor summary API with edge case parameters</p>
+</div>
+<div class='step'>
+<h4>📝 Expected Result</h4>
+<p>Should handle edge cases correctly</p>
+</div>
+<div class='step'>
+<h4>📝 ❌ Authentication Error</h4>
+<p>❌ REFRESH TOKEN EXPIRED: AADB2C90090: The provided JWE is not a valid 5 segment token.
+Correlation ID: ad50eda6-9d49-4219-a9bb-e3ceafd6b84f
+Timestamp: 2025-09-14 17:21:20Z
+</p>
+</div>
+<script>document.getElementById('status_2').innerHTML = '❌ Failed';</script>
+<p><strong>Result:</strong> Test skipped due to authentication failure</p>
+</div>
+</div>
+</div>
+<div class='test' id='test_3'>
+<div class='test-header'>
+<h2>Test 3: GetVendorSummaryData_NegativeCase_InvalidParameters_ShouldReturnError <span class='test-status' id='status_3'>⏳ Running...</span></h2>
+</div>
+<div class='test-content'>
+<p><strong>Description:</strong> Negative case - Test with invalid parameters</p>
+<div class='test-details'>
+<div class='step'>
+<h4>📝 Test Setup</h4>
+<p>Call vendor summary API with invalid parameters</p>
+</div>
+<div class='step'>
+<h4>📝 Expected Result</h4>
+<p>Should return appropriate error response</p>
+</div>
+<div class='step'>
+<h4>📝 ❌ Authentication Error</h4>
+<p>❌ REFRESH TOKEN EXPIRED: AADB2C90090: The provided JWE is not a valid 5 segment token.
+Correlation ID: ad50eda6-9d49-4219-a9bb-e3ceafd6b84f
+Timestamp: 2025-09-14 17:21:20Z
+</p>
+</div>
+<script>document.getElementById('status_3').innerHTML = '❌ Failed';</script>
+<p><strong>Result:</strong> Test skipped due to authentication failure</p>
+</div>
+</div>
+</div>
+<div class='test' id='test_4'>
+<div class='test-header'>
+<h2>Test 4: GetVendorSummaryData_SecurityCase_UnauthorizedAccess_ShouldReturn401 <span class='test-status' id='status_4'>⏳ Running...</span></h2>
+</div>
+<div class='test-content'>
+<p><strong>Description:</strong> Security case - Test unauthorized access</p>
+<div class='test-details'>
+<div class='step'>
+<h4>📝 Test Setup</h4>
+<p>Call vendor summary API without proper authentication</p>
+</div>
+<div class='step'>
+<h4>📝 Expected Result</h4>
+<p>Should return 401 Unauthorized response</p>
+</div>
+<div class='step'>
+<h4>📝 ❌ Authentication Error</h4>
+<p>❌ REFRESH TOKEN EXPIRED: AADB2C90090: The provided JWE is not a valid 5 segment token.
+Correlation ID: ad50eda6-9d49-4219-a9bb-e3ceafd6b84f
+Timestamp: 2025-09-14 17:21:20Z
+</p>
+</div>
+<script>document.getElementById('status_4').innerHTML = '❌ Failed';</script>
+<p><strong>Result:</strong> Test skipped due to authentication failure</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='header'>
+<h2>Test Summary</h2>
+<p><strong>Total Tests:</strong> 4</p>
+<p><strong>Passed:</strong> <span style='color: green'>0</span></p>
+<p><strong>Failed:</strong> <span style='color: red'>4</span></p>
+<p><strong>Success Rate:</strong> 0.0%</p>
+</div>
+</body>
+</html>
+</div>
+</div>
+</div>
+<div class='header'>
+<h2>Test Summary</h2>
+<p><strong>Total Tests:</strong> 4</p>
+<p><strong>Passed:</strong> <span style='color: green'>0</span></p>
+<p><strong>Failed:</strong> <span style='color: red'>4</span></p>
+<p><strong>Success Rate:</strong> 0.0%</p>
+</div>
+</body>
+</html>
